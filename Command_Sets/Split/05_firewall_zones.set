@@ -1,0 +1,55 @@
+#####################################
+# EdgeRouter X Firewall Zone Settings
+#####################################
+
+set zone-policy zone BKP default-action drop
+set zone-policy zone BKP from LOCAL firewall name LOCAL_TO_ALL
+set zone-policy zone BKP from WAN firewall name WAN_TO_ALL
+set zone-policy zone BKP interface eth1
+set zone-policy zone DMZ default-action drop
+set zone-policy zone DMZ from LAN firewall name RESTRICTED_TO_LAN
+set zone-policy zone DMZ from LOCAL firewall name LOCAL_TO_ALL
+set zone-policy zone DMZ from WAN firewall name WAN_TO_ALL
+set zone-policy zone DMZ interface switch0.150
+set zone-policy zone GUEST default-action drop
+set zone-policy zone GUEST from LOCAL firewall name LOCAL_TO_ALL
+set zone-policy zone GUEST from WAN firewall name WAN_TO_ALL
+set zone-policy zone GUEST interface switch0.130
+set zone-policy zone LAN default-action drop
+set zone-policy zone LAN from DMZ firewall name RESTRICTED_TO_LAN
+set zone-policy zone LAN from LOCAL firewall name LOCAL_TO_ALL
+set zone-policy zone LAN from WAN firewall name WAN_TO_ALL
+set zone-policy zone LAN interface switch0.120
+set zone-policy zone LOCAL default-action drop
+set zone-policy zone LOCAL from BKP firewall name EXCEPTION_TO_LOCAL
+set zone-policy zone LOCAL from DMZ firewall name RESTRICTED_TO_LOCAL
+set zone-policy zone LOCAL from GUEST firewall name RESTRICTED_TO_LOCAL
+set zone-policy zone LOCAL from LAN firewall name LAN_TO_ALL
+set zone-policy zone LOCAL from MGMT firewall name EXCEPTION_TO_LOCAL
+set zone-policy zone LOCAL from VOIP firewall name RESTRICTED_TO_LOCAL
+set zone-policy zone LOCAL from WAN firewall name WAN_TO_ALL
+set zone-policy zone LOCAL local-zone
+set zone-policy zone MGMT default-action drop
+set zone-policy zone MGMT from LOCAL firewall name LOCAL_TO_ALL
+set zone-policy zone MGMT from WAN firewall name WAN_TO_ALL
+set zone-policy zone MGMT interface switch0.110
+set zone-policy zone VOIP default-action drop
+set zone-policy zone VOIP from LOCAL firewall name LOCAL_TO_ALL
+set zone-policy zone VOIP from WAN firewall name WAN_TO_ALL
+set zone-policy zone VOIP interface switch0.140
+set zone-policy zone WAN default-action drop
+set zone-policy zone WAN from DMZ firewall name RESTRICTED_TO_WAN
+set zone-policy zone WAN from GUEST firewall name RESTRICTED_TO_WAN
+set zone-policy zone WAN from LAN firewall name LAN_TO_ALL
+set zone-policy zone WAN from LOCAL firewall name LOCAL_TO_ALL
+set zone-policy zone WAN from MGMT firewall name RESTRICTED_TO_WAN
+set zone-policy zone WAN from VOIP firewall name RESTRICTED_TO_WAN
+set zone-policy zone WAN interface eth4
+
+#############
+# START NOTES
+#############
+
+###########
+# END NOTES
+###########

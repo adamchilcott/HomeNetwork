@@ -1,0 +1,23 @@
+#######################################
+# EdgeRouter X Traffic Control Settings
+#######################################
+
+set traffic-control smart-queue ISP download ecn enable
+set traffic-control smart-queue ISP download flows 1024
+set traffic-control smart-queue ISP download fq-quantum 1514
+set traffic-control smart-queue ISP download limit 10240
+set traffic-control smart-queue ISP download rate 50mbit
+set traffic-control smart-queue ISP upload ecn enable
+set traffic-control smart-queue ISP upload flows 1024
+set traffic-control smart-queue ISP upload fq-quantum 1514
+set traffic-control smart-queue ISP upload limit 10240
+set traffic-control smart-queue ISP upload rate 25mbit
+set traffic-control smart-queue ISP wan-interface eth4
+
+#############
+# START NOTES
+#############
+
+###########
+# END NOTES
+###########

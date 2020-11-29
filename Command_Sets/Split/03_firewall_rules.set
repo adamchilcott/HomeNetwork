@@ -1,0 +1,112 @@
+################################
+# EdgeRouter X Firewall Settings
+################################
+
+set firewall all-ping enable
+set firewall broadcast-ping disable
+set firewall group address-group Quad9 address 9.9.9.9
+set firewall group address-group Quad9 address 149.112.112.112
+set firewall group address-group Quad9 description ''
+set firewall ipv6-receive-redirects disable
+set firewall ipv6-src-route disable
+set firewall ip-src-route disable
+set firewall log-martians enable
+set firewall name EXCEPTION_TO_LOCAL default-action drop
+set firewall name EXCEPTION_TO_LOCAL rule 10 action accept
+set firewall name EXCEPTION_TO_LOCAL rule 10 description DNS
+set firewall name EXCEPTION_TO_LOCAL rule 10 destination port 53
+set firewall name EXCEPTION_TO_LOCAL rule 10 log disable
+set firewall name EXCEPTION_TO_LOCAL rule 10 protocol tcp_udp
+set firewall name EXCEPTION_TO_LOCAL rule 20 action accept
+set firewall name EXCEPTION_TO_LOCAL rule 20 description DHCP
+set firewall name EXCEPTION_TO_LOCAL rule 20 destination port 67
+set firewall name EXCEPTION_TO_LOCAL rule 20 log disable
+set firewall name EXCEPTION_TO_LOCAL rule 20 protocol udp
+set firewall name EXCEPTION_TO_LOCAL rule 30 action accept
+set firewall name EXCEPTION_TO_LOCAL rule 30 description HTTPS
+set firewall name EXCEPTION_TO_LOCAL rule 30 destination port 443
+set firewall name EXCEPTION_TO_LOCAL rule 30 log disable
+set firewall name EXCEPTION_TO_LOCAL rule 30 protocol tcp
+set firewall name EXCEPTION_TO_LOCAL rule 40 action accept
+set firewall name EXCEPTION_TO_LOCAL rule 40 description SSH
+set firewall name EXCEPTION_TO_LOCAL rule 40 destination port 22
+set firewall name EXCEPTION_TO_LOCAL rule 40 log disable
+set firewall name EXCEPTION_TO_LOCAL rule 40 protocol tcp_udp
+set firewall name EXCEPTION_TO_LOCAL rule 50 action accept
+set firewall name EXCEPTION_TO_LOCAL rule 50 description HTTP
+set firewall name EXCEPTION_TO_LOCAL rule 50 destination port 80
+set firewall name EXCEPTION_TO_LOCAL rule 50 log disable
+set firewall name EXCEPTION_TO_LOCAL rule 50 protocol tcp
+set firewall name EXCEPTION_TO_LOCAL rule 60 action accept
+set firewall name EXCEPTION_TO_LOCAL rule 60 description Established
+set firewall name EXCEPTION_TO_LOCAL rule 60 log disable
+set firewall name EXCEPTION_TO_LOCAL rule 60 protocol all
+set firewall name EXCEPTION_TO_LOCAL rule 60 state established enable
+set firewall name EXCEPTION_TO_LOCAL rule 60 state related enable
+set firewall name LAN_TO_ALL default-action accept
+set firewall name LOCAL_TO_ALL default-action accept
+set firewall name RESTRICTED_TO_LAN default-action drop
+set firewall name RESTRICTED_TO_LAN rule 1 action accept
+set firewall name RESTRICTED_TO_LAN rule 1 description Established
+set firewall name RESTRICTED_TO_LAN rule 1 log disable
+set firewall name RESTRICTED_TO_LAN rule 1 protocol all
+set firewall name RESTRICTED_TO_LAN rule 1 state established enable
+set firewall name RESTRICTED_TO_LAN rule 1 state related enable
+set firewall name RESTRICTED_TO_LOCAL default-action drop
+set firewall name RESTRICTED_TO_LOCAL rule 1 action accept
+set firewall name RESTRICTED_TO_LOCAL rule 1 description DNS
+set firewall name RESTRICTED_TO_LOCAL rule 1 destination port 53
+set firewall name RESTRICTED_TO_LOCAL rule 1 log disable
+set firewall name RESTRICTED_TO_LOCAL rule 1 protocol tcp_udp
+set firewall name RESTRICTED_TO_LOCAL rule 2 action accept
+set firewall name RESTRICTED_TO_LOCAL rule 2 description DHCP
+set firewall name RESTRICTED_TO_LOCAL rule 2 destination port 67
+set firewall name RESTRICTED_TO_LOCAL rule 2 log disable
+set firewall name RESTRICTED_TO_LOCAL rule 2 protocol udp
+set firewall name RESTRICTED_TO_LOCAL rule 3 action accept
+set firewall name RESTRICTED_TO_LOCAL rule 3 description Established
+set firewall name RESTRICTED_TO_LOCAL rule 3 log disable
+set firewall name RESTRICTED_TO_LOCAL rule 3 protocol all
+set firewall name RESTRICTED_TO_LOCAL rule 3 state established enable
+set firewall name RESTRICTED_TO_LOCAL rule 3 state related enable
+set firewall name RESTRICTED_TO_WAN default-action accept
+set firewall name WAN_TO_ALL default-action drop
+set firewall name WAN_TO_ALL rule 1 action accept
+set firewall name WAN_TO_ALL rule 1 description Established
+set firewall name WAN_TO_ALL rule 1 log disable
+set firewall name WAN_TO_ALL rule 1 protocol all
+set firewall name WAN_TO_ALL rule 1 state established enable
+set firewall name WAN_TO_ALL rule 1 state invalid disable
+set firewall name WAN_TO_ALL rule 1 state new disable
+set firewall name WAN_TO_ALL rule 1 state related enable
+set firewall receive-redirects disable
+set firewall send-redirects enable
+set firewall source-validation disable
+set firewall syn-cookies enable
+
+## Include NAT Rules here due to Ordering
+
+set service nat rule 1 description 'Exclude Quad9 DNS'
+set service nat rule 1 destination group address-group Quad9
+set service nat rule 1 destination port 53
+set service nat rule 1 exclude
+set service nat rule 1 inbound-interface switch0.130
+set service nat rule 1 inside-address port 53
+set service nat rule 1 log disable
+set service nat rule 1 protocol tcp_udp
+set service nat rule 1 type destination
+set service nat rule 2 description ' Force Quad9 DNS'
+set service nat rule 2 destination port 53
+set service nat rule 2 inbound-interface switch0.130
+set service nat rule 2 inside-address address 149.112.112.112
+set service nat rule 2 log disable
+set service nat rule 2 protocol tcp_udp
+set service nat rule 2 type destination
+
+#############
+# START NOTES
+#############
+
+###########
+# END NOTES
+###########

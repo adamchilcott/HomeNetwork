@@ -1,0 +1,52 @@
+#################################
+# EdgeRouter X Interface Settings
+#################################
+
+set interfaces ethernet eth0 description 'ERX_-_[TRUNK]'
+set interfaces ethernet eth0 duplex auto
+set interfaces ethernet eth0 speed auto
+set interfaces ethernet eth1 address 192.168.10.1/24
+set interfaces ethernet eth1 description 'ERX_-_[BACKUP]'
+set interfaces ethernet eth1 duplex auto
+set interfaces ethernet eth1 speed auto
+set interfaces ethernet eth2 description 'ERX_-_[SPARE]'
+set interfaces ethernet eth2 duplex auto
+set interfaces ethernet eth2 speed auto
+set interfaces ethernet eth3 description 'ERX_-_[DMZ]'
+set interfaces ethernet eth3 duplex auto
+set interfaces ethernet eth3 speed auto
+set interfaces ethernet eth4 address dhcp
+set interfaces ethernet eth4 description 'ERX_-_[WAN]'
+set interfaces ethernet eth4 duplex auto
+set interfaces ethernet eth4 poe output off
+set interfaces ethernet eth4 speed auto
+set interfaces loopback lo
+set interfaces switch switch0 mtu 1500
+set interfaces switch switch0 switch-port interface eth0 vlan vid 100
+set interfaces switch switch0 switch-port interface eth0 vlan vid 110
+set interfaces switch switch0 switch-port interface eth0 vlan vid 120
+set interfaces switch switch0 switch-port interface eth0 vlan vid 130
+set interfaces switch switch0 switch-port vlan-aware enable
+set interfaces switch switch0 vif 100 address 192.168.100.1/24
+set interfaces switch switch0 vif 100 description Staging
+set interfaces switch switch0 vif 100 mtu 1500
+set interfaces switch switch0 vif 110 address 192.168.110.1/24
+set interfaces switch switch0 vif 110 description Management
+set interfaces switch switch0 vif 120 address 192.168.120.1/24
+set interfaces switch switch0 vif 120 description LAN
+set interfaces switch switch0 vif 130 address 192.168.130.1/24
+set interfaces switch switch0 vif 130 description Guest
+set interfaces switch switch0 vif 140 address 192.168.140.1/24
+set interfaces switch switch0 vif 140 description VoIP
+set interfaces switch switch0 vif 140 mtu 1500
+set interfaces switch switch0 vif 150 address 192.168.150.1/24
+set interfaces switch switch0 vif 150 description DMZ
+set interfaces switch switch0 vif 150 mtu 1500
+
+#############
+# START NOTES
+#############
+
+###########
+# END NOTES
+###########

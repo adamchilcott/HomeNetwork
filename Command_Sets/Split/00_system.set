@@ -1,0 +1,26 @@
+##############################
+# EdgeRouter X System Settings
+##############################
+
+set system host-name ERX
+set system login user ubnt authentication encrypted-password '$1$zKNoUbAo$gomzUbYvgyUMcD436Wo66.'
+set system login user ubnt authentication plaintext-password ''
+set system login user ubnt level admin
+set system ntp server 0.ubnt.pool.ntp.org
+set system ntp server 1.ubnt.pool.ntp.org
+set system ntp server 2.ubnt.pool.ntp.org
+set system ntp server 3.ubnt.pool.ntp.org
+set system offload hwnat enable
+set system syslog global facility all level notice
+set system syslog global facility protocols level debug
+set system time-zone Australia/Hobart
+set system traffic-analysis dpi enable
+set system traffic-analysis export enable
+
+#############
+# START NOTES
+#############
+
+###########
+# END NOTES
+###########

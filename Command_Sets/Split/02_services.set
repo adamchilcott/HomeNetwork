@@ -1,0 +1,65 @@
+################################
+# EdgeRouter X Services Settings
+################################
+
+set service dhcp-server disabled false
+set service dhcp-server hostfile-update enable
+set service dhcp-server shared-network-name Backup authoritative enable
+set service dhcp-server shared-network-name Backup subnet 192.168.10.0/24 default-router 192.168.10.1
+set service dhcp-server shared-network-name Backup subnet 192.168.10.0/24 dns-server 192.168.10.1
+set service dhcp-server shared-network-name Backup subnet 192.168.10.0/24 domain-name abc.bkp.local
+set service dhcp-server shared-network-name Backup subnet 192.168.10.0/24 lease 86400
+set service dhcp-server shared-network-name Backup subnet 192.168.10.0/24 start 192.168.10.2 stop 192.168.10.246
+set service dhcp-server shared-network-name Guest authoritative enable
+set service dhcp-server shared-network-name Guest subnet 192.168.130.0/24 default-router 192.168.130.1
+set service dhcp-server shared-network-name Guest subnet 192.168.130.0/24 dns-server 192.168.130.1
+set service dhcp-server shared-network-name Guest subnet 192.168.130.0/24 domain-name abc.guest.local
+set service dhcp-server shared-network-name Guest subnet 192.168.130.0/24 lease 86400
+set service dhcp-server shared-network-name Guest subnet 192.168.130.0/24 start 192.168.130.2 stop 192.168.130.246
+set service dhcp-server shared-network-name LAN authoritative enable
+set service dhcp-server shared-network-name LAN subnet 192.168.120.0/24 default-router 192.168.120.1
+set service dhcp-server shared-network-name LAN subnet 192.168.120.0/24 dns-server 192.168.120.1
+set service dhcp-server shared-network-name LAN subnet 192.168.120.0/24 domain-name abc.lan.local
+set service dhcp-server shared-network-name LAN subnet 192.168.120.0/24 lease 86400
+set service dhcp-server shared-network-name LAN subnet 192.168.120.0/24 start 192.168.120.2 stop 192.168.120.246
+set service dhcp-server shared-network-name Management authoritative enable
+set service dhcp-server shared-network-name Management subnet 192.168.110.0/24 default-router 192.168.110.1
+set service dhcp-server shared-network-name Management subnet 192.168.110.0/24 dns-server 192.168.110.1
+set service dhcp-server shared-network-name Management subnet 192.168.110.0/24 domain-name abc.mgmt.local
+set service dhcp-server shared-network-name Management subnet 192.168.110.0/24 lease 86400
+set service dhcp-server shared-network-name Management subnet 192.168.110.0/24 start 192.168.110.2 stop 192.168.110.246
+set service dhcp-server shared-network-name Management subnet 192.168.110.0/24 static-mapping EAP225-60-32-B1-13-0E-A2 ip-address 192.168.110.3
+set service dhcp-server shared-network-name Management subnet 192.168.110.0/24 static-mapping EAP225-60-32-B1-13-0E-A2 mac-address '60:32:b1:13:0e:a2'
+set service dhcp-server shared-network-name Management subnet 192.168.110.0/24 static-mapping TL-SG105PE ip-address 192.168.110.2
+set service dhcp-server shared-network-name Management subnet 192.168.110.0/24 static-mapping TL-SG105PE mac-address '3c:84:6a:61:96:18'
+set service dhcp-server shared-network-name Staging authoritative enable
+set service dhcp-server shared-network-name Staging subnet 192.168.100.0/24 default-router 192.168.100.1
+set service dhcp-server shared-network-name Staging subnet 192.168.100.0/24 dns-server 192.168.100.1
+set service dhcp-server shared-network-name Staging subnet 192.168.100.0/24 domain-name abc.stage.local
+set service dhcp-server shared-network-name Staging subnet 192.168.100.0/24 lease 86400
+set service dhcp-server shared-network-name Staging subnet 192.168.100.0/24 start 192.168.100.2 stop 192.168.100.246
+set service dhcp-server static-arp disable
+set service dhcp-server use-dnsmasq disable
+set service dns forwarding cache-size 150
+set service dns forwarding listen-on switch0.110
+set service dns forwarding listen-on switch0.120
+set service dns forwarding listen-on switch0.130
+set service gui http-port 80
+set service gui https-port 443
+set service gui older-ciphers enable
+set service nat rule 5000 description MASQUERADE
+set service nat rule 5000 log disable
+set service nat rule 5000 outbound-interface eth4
+set service nat rule 5000 protocol all
+set service nat rule 5000 type masquerade
+set service ssh port 22
+set service ssh protocol-version v2
+set service unms disable
+
+#############
+# START NOTES
+#############
+
+###########
+# END NOTES
+###########
