@@ -60,7 +60,7 @@ Staging VLAN has no Firewall Zone. It is a Sheol space with no Internet Access.
 ### DNS
 
 - All devices on the Guest VLAN are forced to use [Quad9](https://www.quad9.net) DNS Servers.
-- Some manual entries applied to `/etc/hosts` to resolve local addresses:
+- Some manual entries applied to `/etc/hosts` to resolve statically assigned local addresses:
 
 ```
 127.0.0.1 localhost
