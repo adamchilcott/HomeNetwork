@@ -3,8 +3,8 @@
 Nice things to implement, eventually!
 
 ### DoH/DNSSEC
-- https://community.ui.com/questions/Sure-Shot-Way-to-Enable-Secure-DNS-via-DoH-and-DNSSEC-on-EdgeOS/797b3ac1-dc88-483e-b8f1-3cacac42235a
 - https://github.com/nextdns/nextdns
+- https://community.ui.com/questions/Sure-Shot-Way-to-Enable-Secure-DNS-via-DoH-and-DNSSEC-on-EdgeOS/797b3ac1-dc88-483e-b8f1-3cacac42235a
 
 ### Dual-Stack IPv4/IPv6
 
