@@ -93,7 +93,7 @@ ff02::2 ip6-allrouters
 
 ### Diagrams
 
-- Rough layout of what is happening mapped with [app.diagrams.net](https://app.diagrams.net)
+- Rough layout of what is happening mapped out with [app.diagrams.net](https://app.diagrams.net)
 
 ### Files
 
