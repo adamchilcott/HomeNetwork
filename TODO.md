@@ -1,6 +1,10 @@
 # Feature Requests
 
-Nice things that would be a great addition to this repository. 
+Nice things to implement, eventually!
+
+### DoH/DNSSEC
+- https://community.ui.com/questions/Sure-Shot-Way-to-Enable-Secure-DNS-via-DoH-and-DNSSEC-on-EdgeOS/797b3ac1-dc88-483e-b8f1-3cacac42235a
+- https://github.com/nextdns/nextdns
 
 ### Dual-Stack IPv4/IPv6
 
@@ -13,7 +17,3 @@ I've seen plenty of tutorials implementing OpenVPN for the EdgeRouter X but none
 ### Quality of Service/Traffic Control
 
 I have some basic traffic control features turned-on, but it would be nice to get my head around DSCP/802.1P, which the TL-SG105PE and ERX support according to the product documentation and apply accordingly.
-
-### DoH/DNSSEC
-- https://community.ui.com/questions/Sure-Shot-Way-to-Enable-Secure-DNS-via-DoH-and-DNSSEC-on-EdgeOS/797b3ac1-dc88-483e-b8f1-3cacac42235a
-- https://github.com/nextdns/nextdns
