@@ -8,8 +8,9 @@ I would like to thank [maxslug](https://github.com/maxslug) and [mjp66](https://
 
 ## Inspiration
 
-- https://github.com/maxslug/mikrotik_maxslug
 - https://github.com/mjp66/Ubiquiti
+- https://github.com/maxslug/mikrotik_maxslug
+- https://dongknows.com/tp-link-omada-class-diy-mesh-review
 
 ### Goals
 
