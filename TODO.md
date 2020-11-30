@@ -15,5 +15,5 @@ I've seen plenty of tutorials implementing OpenVPN for the EdgeRouter X but none
 I have some basic traffic control features turned-on, but it would be nice to get my head around DSCP/802.1P, which the TL-SG105PE and ERX support according to the product documentation and apply accordingly.
 
 ### DoH/DNSSEC
-https://community.ui.com/questions/Sure-Shot-Way-to-Enable-Secure-DNS-via-DoH-and-DNSSEC-on-EdgeOS/797b3ac1-dc88-483e-b8f1-3cacac42235a
-https://github.com/nextdns/nextdns
+- https://community.ui.com/questions/Sure-Shot-Way-to-Enable-Secure-DNS-via-DoH-and-DNSSEC-on-EdgeOS/797b3ac1-dc88-483e-b8f1-3cacac42235a
+- https://github.com/nextdns/nextdns
