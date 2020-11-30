@@ -50,7 +50,7 @@ There are a number of Firewall Zones:
 - DMZ - Demilitarised Zone.
 - BKP - Spare Port to Access ERX.
 
-Staging VLAN has no Firewall Zone. It is a Sheol space with no Internet Access.
+Staging VLAN has no Firewall Zone. It is a Sheol space with no Internet access.
 
 ### Wireless
 
