@@ -103,8 +103,8 @@ ff02::2 ip6-allrouters
       show configuration commands
 
 - Splits are in the order the configuration should be applied to the ERX (I haven't tested this yet).
+- If you want one long, continous configuration file you can concatenate the splits with your platform of choice.
 - Screenshots of the TP-Link TL-SG105PE V1 Web Interface Settings.
-- If you want one long, continous configuration file you can concatenate the splits with your platform of choice. 
 
 ### Notes
 
