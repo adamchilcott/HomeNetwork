@@ -4,7 +4,7 @@
 
 This repository will hold configuration details for a relatively complex home network revolving around Ubiquiti EdgeMAX & TP-Link Products.
 
-I would like to thank [maxslug](https://github.com/maxslug) and [mjp66](https://github.com/mjp66).
+I would like to thank [maxslug](https://github.com/maxslug), [mjp66](https://github.com/mjp66) and [Dong Ngo](https://dongknows.com/about-dong-ngo).
 
 ## Inspiration
 
