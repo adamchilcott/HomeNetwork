@@ -89,7 +89,7 @@ ff02::2 ip6-allrouters
 # END MANUAL ENTRY
 ##################
 
-192.168.120.1    MYPC.abc.lan.local    #on-dhcp-event 0:xx:xx:xx:xx:xx
+192.168.120.1    MYPC.abc.lan.local    #on-dhcp-event 0:1f:13:5a:bd:99
 127.0.1.1        ERX     #vyatta entry
 ```
 
