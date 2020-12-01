@@ -108,7 +108,7 @@ ff02::2 ip6-allrouters
 - If you want one long, continous configuration file you can concatenate the splits with your platform of choice.
 - Screenshots of the TP-Link TL-SG105PE V1 Web Interface Settings.
 
-### Notes
+### Other
 
 - Please check the `TODO` Please fork/contribute!
 - [EdgeRouter - Configuration and Operational Mode](https://help.ui.com/hc/en-us/articles/204960094)
