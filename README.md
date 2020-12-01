@@ -56,7 +56,7 @@ Staging VLAN has no Firewall Zone. It is a Sheol space with no Internet access.
 ### Wireless
 
 - TP-Link EAP225 V3 in Standalone Mode. No Omada Controller. 
-- Each 2.4Ghz SSID has an accompanying 5Ghz SSID of the same name and key. This allows at least basic Roaming to be enabled without a controller. 
+- Each 2.4Ghz SSID has an accompanying 5Ghz SSID of the same name and key. This allows the Beam Forming feature to be enabled as per product documentation.
 
 ### DNS
 
