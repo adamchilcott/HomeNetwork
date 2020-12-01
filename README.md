@@ -14,7 +14,7 @@ I would like to thank [maxslug](https://github.com/maxslug) and [mjp66](https://
 
 ### Goals
 
-- Purchase inexpensive, off the-shelf products that are easily available without compromising on quality or features.
+- Purchase inexpensive, off the-shelf products that are easily available without compromising entirely on quality or features.
 - Isolate devices to each VLAN with some exceptions. I do not want devices talking across VLANs.
 - Force Guest and IoT devices to use specific DNS Servers.
 - Keep the setup small, but available to expansion if required.
