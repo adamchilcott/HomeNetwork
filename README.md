@@ -110,6 +110,6 @@ ff02::2 ip6-allrouters
 
 ### Other
 
-- Please check the `TODO` Please fork/contribute!
+- Please check the `TODO` contribute/fork!
 - [EdgeRouter - Configuration and Operational Mode](https://help.ui.com/hc/en-us/articles/204960094)
 - [EdgeRouter - Copy and Replace Configuration Sections](https://help.ui.com/hc/en-us/articles/205223490-EdgeRouter-Copy-and-Replace-Configuration-Sections)
