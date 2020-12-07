@@ -95,7 +95,7 @@ set service nat rule 1 inside-address port 53
 set service nat rule 1 log disable
 set service nat rule 1 protocol tcp_udp
 set service nat rule 1 type destination
-set service nat rule 2 description ' Force Quad9 DNS'
+set service nat rule 2 description 'Force Quad9 DNS'
 set service nat rule 2 destination port 53
 set service nat rule 2 inbound-interface switch0.130
 set service nat rule 2 inside-address address 149.112.112.112
