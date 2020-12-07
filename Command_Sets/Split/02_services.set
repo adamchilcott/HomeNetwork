@@ -54,22 +54,6 @@ set service dns forwarding listen-on switch0.150
 set service gui http-port 80
 set service gui https-port 443
 set service gui older-ciphers enable
-set service nat rule 1 description 'Exclude Quad9 DNS'
-set service nat rule 1 destination group address-group Quad9
-set service nat rule 1 destination port 53
-set service nat rule 1 exclude
-set service nat rule 1 inbound-interface switch0.130
-set service nat rule 1 inside-address port 53
-set service nat rule 1 log disable
-set service nat rule 1 protocol tcp_udp
-set service nat rule 1 type destination
-set service nat rule 2 description ' Force Quad9 DNS'
-set service nat rule 2 destination port 53
-set service nat rule 2 inbound-interface switch0.130
-set service nat rule 2 inside-address address 149.112.112.112
-set service nat rule 2 log disable
-set service nat rule 2 protocol tcp_udp
-set service nat rule 2 type destination
 set service nat rule 5000 description MASQUERADE
 set service nat rule 5000 log disable
 set service nat rule 5000 outbound-interface eth4
