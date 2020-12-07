@@ -26,6 +26,8 @@ set interfaces switch switch0 switch-port interface eth0 vlan vid 100
 set interfaces switch switch0 switch-port interface eth0 vlan vid 110
 set interfaces switch switch0 switch-port interface eth0 vlan vid 120
 set interfaces switch switch0 switch-port interface eth0 vlan vid 130
+set interfaces switch switch0 switch-port interface eth0 vlan vid 150
+set interfaces switch switch0 switch-port interface eth3 vlan pvid 150
 set interfaces switch switch0 switch-port vlan-aware enable
 set interfaces switch switch0 vif 100 address 192.168.100.1/24
 set interfaces switch switch0 vif 100 description Staging
