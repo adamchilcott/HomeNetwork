@@ -2,6 +2,7 @@
 # EdgeRouter X System Settings
 ##############################
 
+set system domain name abc.sys.local
 set system host-name ERX
 set system login user ubnt authentication encrypted-password '$1$zKNoUbAo$gomzUbYvgyUMcD436Wo66.'
 set system login user ubnt authentication plaintext-password ''
