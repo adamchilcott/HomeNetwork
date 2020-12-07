@@ -7,7 +7,7 @@ set zone-policy zone BKP from LOCAL firewall name LOCAL_TO_ALL
 set zone-policy zone BKP from WAN firewall name WAN_TO_ALL
 set zone-policy zone BKP interface eth1
 set zone-policy zone DMZ default-action drop
-set zone-policy zone DMZ from LAN firewall name RESTRICTED_TO_LAN
+set zone-policy zone DMZ from LAN firewall name LAN_TO_ALL
 set zone-policy zone DMZ from LOCAL firewall name LOCAL_TO_ALL
 set zone-policy zone DMZ from WAN firewall name WAN_TO_ALL
 set zone-policy zone DMZ interface switch0.150
